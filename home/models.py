@@ -15,7 +15,7 @@ class Attendance(models.Model):
     checkin = models.DateTimeField(auto_now_add=True)
     checkout = models.DateTimeField(null=True)
     attended = models.BooleanField(default=False)
-    available_time= models.DateTimeField(null=True)
+    available_time= models.CharField(null=True,max_length=100)
     
     def __str__(self):
         return self.employee.name
